@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sample Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sample/css/sample.css' %}" >
+    <script type="text/javascript" src="{% static 'sample/js/jquery-3.5.0.min.js' %}" ></script>
+  </head>
+  <body>
+    <input type="date" name="" value="">
+    <div id="calendar">
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+       <!-- <form action="{% url "sample"  %}" method="post">-->
+       {% csrf_token %}
+      <span class="close">&times;</span>
+       <label for="dirnklevel">飲酒量：</label>
+       <select name="level" id="drinklevel">
+         <option value="0">--飲酒量を選択してくだい--</option>
+         <option value="3">飲酒なし</option>
+         <option value="2">少量</option>
+         <option value="1">通常</option>
+         <option value="0">多量</option>
+       </select>
+       <button id="sum" type="button">OK</button>
+    </div>
+    </div>
+
+    <p>スコア:<b id="scoreCard">0</b></p>
+    <script src="{% static 'sample/js/sample.js' %}"></script>
+    <a href="{% url "table" %}">table</a>
+  </body>
+</html>

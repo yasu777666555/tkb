@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>score</th>
+            <th>date</th>
+
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.score}}</td>
+            <td>{{item.date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url "sample" %}">return</a>
+
+</body>
+</html>
