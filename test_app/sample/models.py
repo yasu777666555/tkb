@@ -7,4 +7,4 @@ class ScoreTable(models.Model):
 
     def __str__(self):
         return '<date:id=' + str(self.id) + ', ' + \
-            self.date + '(' + str(self.score) + ')>'
+            str(self.date) + '(' + str(self.score) + ')>'
