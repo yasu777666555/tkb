@@ -22,5 +22,7 @@ urlpatterns = [
     path('', views.index,name="sample"),
     path('table', views.table, name="table"),
     re_path(r'^table_details/(?P<slug>[\w-]+)/$', views.table_details, name="table_details"),
-    path('table_write', views.table_write, name="table_write")
+    path('table_write', views.table_write, name="table_write"),
+    path('signup', views.UserSingUp.as_view(), name="signup"),
+    path('auth', views.auth, name="auth")
 ]
